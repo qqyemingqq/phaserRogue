@@ -3,12 +3,12 @@ import './js/libs/symbol';
 import './js/libs/stub';
 
 import './js/phaserGlobals';
-
+//
 import StartState from './states/Start.js';
 import GameState from './states/Game.js';
 
 var aspect = window.innerWidth / window.innerHeight;
-var gameWidth = 640;
+var gameWidth = 960;
 var gameHeight = gameWidth / aspect;
 
 var game = new Phaser.Game({
