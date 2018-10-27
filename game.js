@@ -3,12 +3,11 @@ import './js/libs/symbol';
 import './js/libs/stub';
 
 import './js/phaserGlobals';
-//
 import StartState from './states/Start.js';
 import GameState from './states/Game.js';
 
 var aspect = window.innerWidth / window.innerHeight;
-var gameWidth = 960;
+var gameWidth = 240;
 var gameHeight = gameWidth / aspect;
 
 var game = new Phaser.Game({
@@ -17,6 +16,8 @@ var game = new Phaser.Game({
   renderer: Phaser.CANVAS,
   canvas: canvas
 });
+Phaser.Canvas.setSmoothingEnabled(canvas, false);
+Phaser.Canvas.setImageRenderingCrisp(canvas);
 
 game.state.add('Start', StartState, false);
 game.state.add('Game', GameState, false);
